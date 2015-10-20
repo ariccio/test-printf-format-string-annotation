@@ -13,7 +13,9 @@ int main( ) {
 
 	boring_printf( three_char_str );
 
-	three_char_str[ 2 ] = '`';
+	three_char_str[ 2 ] = '`'; //nuke the null-terminator
 
-	boring_printf( three_char_str );
+	boring_printf( three_char_str );//non-terminated-buffer
+
+	puts( three_char_str );//non-terminated-buffer
 }
